@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <style type="text/css">
+        .container{
+            width:30%;
+            height:30%;
+            background:#009933;
+            float: center;
+            position: relative;
+        }
+        .text1{
+            color:black;
+        }
+        .title1{
+            color:black;
+            font-size:200%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Monitoring of Weight Changes</title>
+</head>
+<body style="background-color: white">
+    <div class='container'>
+        <p class="title1"> Registration</p>
+        <form method = "post">
+            {% csrf_token %}
+            {{form.login}}<br>
+            {{form.password}}<br>
+            <button type = "submit" <p class='text1'>Sign Up</p> </button>
+            <span>{{ error }}</span>
+        </form>
+    </div>
+</body>
+</html>

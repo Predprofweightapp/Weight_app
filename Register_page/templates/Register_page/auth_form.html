@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Monitoring of Weight Changes</title>
+</head>
+<body style="background-color: white">
+    <h1> Volki delaut Auth</h1>
+    <form method = "post">
+        {% csrf_token %}
+        {{form.login}}<br>
+        {{form.password}}<br>
+        <button type = "submit" <p>Sign In</p> </button>
+        <span>{{ error }}</span>
+        {% for i in users %}
+            {% if i.login == form.login %}
+
+            {% endif %}
+        {% endfor %}
+    </form>
+
+    <button onclick="window.location.href = {% url 'reg' %};">Registration</button>
+</body>
+</html>
