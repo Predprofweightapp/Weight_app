@@ -1,1 +1,1 @@
-web: gunicorn weight--app.wsgi --log-file -
+web: gunicorn weight_app.wsgi --log-file -
